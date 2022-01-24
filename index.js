@@ -8,6 +8,8 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+const { Server } = require('socket.io');
+const io = new Server(expressServer);
 
 
 expressServer.listen(3000, () => { 
